@@ -1,4 +1,4 @@
-def decifrar(str string, int rot):
+cpdef str decifrar(str string, int rot):
     cdef list values = []
     cdef list finalList = []
     cdef str decifrado = ''

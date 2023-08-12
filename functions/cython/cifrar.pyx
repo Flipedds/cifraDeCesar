@@ -1,4 +1,4 @@
-def cifrar(str string, int rot):
+cpdef str cifrar(str string, int rot):
     cdef list values = []
     cdef list finalList = []
     cdef str cifrado = ''
