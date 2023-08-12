@@ -1,11 +1,13 @@
-from functions.cifrar import cifrar
-from functions.decifrar import decifrar
+import timeit
+from functions.cython.funcaoCifrar import cifrar
+from functions.cython.funcaoDecifrar import decifrar
 
-stringParaCifrar = input("Digite a palavra/frase à ser cifrada!: ")
-rotacao = int(input("Digite a rotação: "))
+stringParaCifrar = "Filipe"
+stringCifrada = "ilolsh"
 
-print(f"Cifrado: {cifrar(stringParaCifrar, rotacao)}")
+inicio = timeit.default_timer()
+print(f"Cifrado: {cifrar(stringParaCifrar, 3)}")
+print(f"Decifrado: {decifrar(stringCifrada, 3)}")
 
-stringCifrada = input("Digite a palavra/frase à ser decifrada!: ")
-rotacao = int(input("Digite a rotação: "))
-print(f"Decifrado: {decifrar(stringCifrada, rotacao)}")
+fim = timeit.default_timer()
+print ('tempo de execução: %f' % (fim - inicio))

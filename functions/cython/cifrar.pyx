@@ -1,9 +1,7 @@
-from functions.new import Array
-
-def cifrar(string: str, rot: int):
-    values: Array = []
-    finalList: Array = []
-    cifrado: str = ''
+def cifrar(str string, int rot):
+    cdef list values = []
+    cdef list finalList = []
+    cdef str cifrado = ''
     for char in string:
         values.append(int(ord(char) + rot))
         
