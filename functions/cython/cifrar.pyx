@@ -12,3 +12,4 @@ cpdef str cifrar(str string, int rot):
         cifrado = cifrado + str
 
     return cifrado
+    
